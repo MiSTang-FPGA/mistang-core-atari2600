@@ -11,6 +11,8 @@ An Atari 2600 style core for MiSTang (Sipeed Tang Nano 20K). Written from scratc
 
 ![frame from simulation](docs/img/sim-atari2600.png)
 
-Status: verified in simulation only (3 of 3 random 6502 programs match cycle for cycle; the demo frame and collision latches match the reference). The bitstream builds and loads onto the board over JTAG, but no HDMI image has been captured yet: on 2026-11-04 the capture card showed black for every core, including the known-good Pong, so the cause is the capture chain and not this core. No board screenshot until that works.
+Status: verified in simulation (3 of 3 random 6502 programs match cycle for cycle; the demo frame and collision latches match the reference). It ran on a real Tang Nano 20K: the 720p HDMI frame below was captured with a UVC capture card from the first bitstream, built with the Mac toolchain. Two bitstreams built later with the Windows toolchain (placement seeds 1 and 2, both meeting timing in nextpnr) did not give a stable picture on the capture card; the cause is not known yet, so treat the board result as "worked once".
+
+![720p HDMI capture from the board (first bitstream)](docs/img/board-hdmi.png)
 
 Licence: see `LICENSE`. This core contains no Atari or MiSTer code.
